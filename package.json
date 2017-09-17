@@ -1,0 +1,25 @@
+{
+  "name": "new-hope",
+  "version": "1.0.0",
+  "description": "Esperanto tokenizer",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jasmine ./built/spec/*.js"
+  },
+  "author": {
+    "name": "Maroun Baydoun",
+    "url": "http://www.maroun-baydoun.com/"
+  },
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "esperanto",
+    "tokenizer"
+  ],
+  "devDependencies": {
+    "@types/jasmine": "2.6.0",
+    "jasmine": "2.8.0",
+    "typescript": "2.5.2"
+  }
+}
