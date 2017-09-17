@@ -12,6 +12,14 @@
     "url": "http://www.maroun-baydoun.com/"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maroun-baydoun/new-hope.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maroun-baydoun/new-hope/issues"
+  },
+  "homepage": "https://github.com/maroun-baydoun/new-hope#readme",
   "keywords": [
     "typescript",
     "esperanto",
