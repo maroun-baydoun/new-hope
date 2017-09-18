@@ -1,6 +1,8 @@
 *.ts
 !*.d.ts
 spec/**/*
-tslint.json
-tsconfig.json
 node_modules/**/*
+src/**/*
+tsconfig.json
+tsconfig-test.json
+webpack.config.js

@@ -2,6 +2,8 @@
   "name": "new-hope",
   "version": "1.0.0",
   "description": "Esperanto tokenizer",
+  "main": "./dist/new-hope.js",
+  "types": "./dist/types/new-hope.d.ts",
   "scripts": {
     "build": "webpack",
     "watch": "webpack -w",
