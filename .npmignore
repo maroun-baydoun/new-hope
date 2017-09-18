@@ -3,3 +3,4 @@
 spec/**/*
 tslint.json
 tsconfig.json
+node_modules/**/*

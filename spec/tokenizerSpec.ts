@@ -1,4 +1,4 @@
-import {tokenize} from "../tokenizer";
+import {tokenize} from "../src/new-hope";
 
 describe("tokenize", () => {
 

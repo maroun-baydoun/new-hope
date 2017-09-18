@@ -1,4 +1,4 @@
-import {split} from "../splitter";
+import {split} from "../src/new-hope";
 
 describe("split", () => {
 
