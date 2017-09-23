@@ -40,3 +40,6 @@ const tokens = tokenize(words);
 ]
 
 ```
+
+---
+Give it a try here [here](https://maroun-baydoun.github.io/new-hope/).
