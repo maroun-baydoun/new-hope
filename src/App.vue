@@ -57,14 +57,28 @@ export default {
 </script>
 
 <style lang="scss">
+html, body {
+  padding: 0;
+  margin: 0;
+}
 #app {
     font-family: Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
 
-    header {
+    a {
+      color: #090;
+      text-decoration: none;
+      transition: color 0.3s;
 
+      &:hover {
+        color: #01a901;
+        text-decoration: underline;
+      }
+    }
+
+    header {
       position: relative;
       padding: 10px 30px;
       height: 50px;
@@ -113,6 +127,7 @@ export default {
       .input {
         display: flex;
         justify-content: center;
+        flex-direction: row;
 
         .container {
           margin-top: 20px;
@@ -134,10 +149,7 @@ export default {
           padding: 0;
           margin-bottom: 100px;
         }
-
       }
-
-
     }
 
     footer {
@@ -155,6 +167,66 @@ export default {
     }
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 760px) {
+  #app {
+    header {
+      padding: 10px 3%;
+
+      h1, h4 {
+        display: block;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h4 {
+        margin: 0;
+        font-size: 13px;
+      }
+
+      .npm-badge, .github-badge {
+        right: 3%;
+      }
+
+      .npm-badge {
+        top: 10px;
+      }
+
+      .github-badge {
+        top: 40px;
+      }
+
+    }
+
+    main {
+      width: 94%;
+      padding: 0 3%;
+      margin: 30px auto;
+
+      .input {
+        flex-direction: column;
+
+        .submit-container {
+          margin: 15px auto 0 auto;
+          width: 70%;
+        }
+      }
+
+      .output {
+        margin-top: 20px;
+
+        .token-list {
+          flex-direction: column;
+        }
+      }
+    }
+
+    footer {
+      padding: 10px 3%;
+    }
+  }
+}
 
 
 </style>

@@ -46,4 +46,11 @@ button {
       box-shadow: 1px 1px 1px #ddd;
     }
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 760px) {
+  button {
+    width: 100%;
+  }
+}
+
 </style>
