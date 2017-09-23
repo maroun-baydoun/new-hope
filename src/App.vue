@@ -1,18 +1,56 @@
 <template>
-  <div id="app">
-    <h1>New Hope</h1>
-    <h2>Esperanto Tokenizer</h2>
-    <a href="https://badge.fury.io/js/new-hope">
-      <img src="https://badge.fury.io/js/new-hope.svg" alt="npm version" height="18">
-    </a>
-  </div>
+<div id="app">
+  <header>
+    <h1><a href="https://github.com/maroun-baydoun/new-hope">new-hope</a></h1>
+    <h4>Esperanto Tokenizer</h4>
+    <div class="npm-badge">
+      <a href="https://badge.fury.io/js/new-hope">
+        <img src="https://badge.fury.io/js/new-hope.svg" alt="npm version" height="18">
+      </a>
+    </div>
+    <div class="github-badge">
+      <a class="github-button" href="https://github.com/maroun-baydoun/new-hope" data-show-count="true" aria-label="Star maroun-baydoun/new-hope on GitHub"></a>
+    </div>
+  </header>
+  <main>
+    <section class="input">
+      <text-box v-model="input" placeholder="Enter an Esperanto sentence" container-class="container"></text-box>
+      <submit :onClick="onSubmit" container-class="container submit-container"></submit>
+    </section>
+    <section class="output">
+      <ul class="token-list">
+        <token v-for="token in tokens" :key="token.value" :token="token"></token>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    Created by <a href="http://www.maroun-baydoun.com" rel="external">Maroun Baydoun</a>
+  </footer>
+</div>
 </template>
 
 <script>
+import Submit from './Submit.vue';
+import TextBox from './TextBox.vue';
+import Token from './Token.vue';
+import {split, tokenize} from 'new-hope';
+
 export default {
   name: 'app',
-  data () {
+  data: function() {
     return {
+      input: "",
+      tokens: []
+    }
+  },
+  components: {
+    'text-box': TextBox,
+    'submit': Submit,
+    'token': Token
+  },
+  methods: {
+    onSubmit() {
+      this.tokens = tokenize(split(this.input));
     }
   }
 }
@@ -20,16 +58,103 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+
+    header {
+
+      position: relative;
+      padding: 10px 30px;
+      height: 50px;
+      border-bottom: 1px solid #efefef;
+
+      .npm-badge, .github-badge {
+        position: absolute;
+        top: 15px;
+      }
+
+      .npm-badge {
+        right: 30px;
+      }
+
+      .github-badge {
+        right: 155px;
+      }
+
+      h1, h4 {
+        font-weight: normal;
+        display: inline-block;
+        margin: 0;
+      }
+
+      h1 {
+
+        a{
+          color: inherit;
+          text-decoration: none;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      h4 {
+        margin-left: 10px;
+      }
+    }
+
+    main {
+      max-width: 800px;
+      margin: 80px auto;
+
+      .input {
+        display: flex;
+        justify-content: center;
+
+        .container {
+          margin-top: 20px;
+          display: inline-block;
+        }
+
+        .submit-container {
+          margin-left: 10px;
+        }
+      }
+
+      .output {
+        margin-top: 50px;
+
+        .token-list {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          padding: 0;
+          margin-bottom: 100px;
+        }
+
+      }
+
+
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      padding: 10px 30px;
+      background-color: #fff;
+      border-top: 1px solid #efefef;
+      line-height: 30px;
+      font-size: 13px;
+      z-index: 100;
+    }
 }
 
-h1, h2 {
-  font-weight: normal;
-}
+
 
 </style>
