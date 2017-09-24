@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack -w",
-    "test": "tsc -p tsconfig-test.json && jasmine ./spec/*.js"
+    "test": "jasmine-ts ./spec/*.ts"
   },
   "author": {
     "name": "Maroun Baydoun",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "@types/jasmine": "2.6.0",
     "jasmine": "2.8.0",
+    "jasmine-ts": "0.2.1",
     "ts-loader": "2.3.7",
     "typescript": "2.5.2",
     "webpack": "3.6.0"
