@@ -13,10 +13,12 @@
     </div>
   </header>
   <main>
-    <section class="input">
-      <text-box v-model="input" placeholder="Enter an Esperanto sentence" container-class="container"></text-box>
-      <submit :onClick="onSubmit" container-class="container submit-container"></submit>
-    </section>
+    <form v-on:submit.prevent="onSubmit">
+      <section class="input">
+        <text-box v-model="input" placeholder="Enter an Esperanto sentence" container-class="container"></text-box>
+        <submit container-class="container submit-container"></submit>
+      </section>
+    </form>
     <section class="output">
       <ul class="token-list">
         <token v-for="token in tokens" :key="token.value" :token="token"></token>
@@ -101,18 +103,6 @@ html, body {
         font-weight: normal;
         display: inline-block;
         margin: 0;
-      }
-
-      h1 {
-
-        a{
-          color: inherit;
-          text-decoration: none;
-        }
-
-        &:hover {
-          text-decoration: underline;
-        }
       }
 
       h4 {

@@ -1,6 +1,6 @@
 <template>
 <div :class="[containerClass]">
-  <button @click="onClick">Tokenize</button>
+  <button type="submit">Tokenize</button>
 </div>
 </template>
 
@@ -10,10 +10,6 @@ export default {
   props: {
     containerClass: {
       type: String
-    },
-    onClick: {
-      type: Function,
-      required: true
     }
   },
   data: function() {
