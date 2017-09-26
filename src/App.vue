@@ -59,6 +59,15 @@ export default {
   methods: {
     onSubmit() {
       this.tokens = tokenize(split(this.input));
+      const element = this.$el;
+      const input = element.querySelector("input[type='text']");
+      const tokenList = element.querySelector(".token-list");
+      if (input) {
+        input.blur();
+      }
+      if (tokenList) {
+        this.$scrollTo(tokenList, 500, {offset: -10 , cancelable: false});
+      }
     }
   }
 }
@@ -228,6 +237,7 @@ html, body {
       height: auto;
       flex-direction: column;
       line-height: 16px;
+      box-shadow: 0 0 5px #efefef;
       > div {
         padding: 5px 3%;
       }
