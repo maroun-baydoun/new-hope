@@ -26,7 +26,13 @@
     </section>
   </main>
   <footer>
-    Created by <a href="http://www.maroun-baydoun.com" rel="external">Maroun Baydoun</a>
+    <div>
+      Created by <a href="http://www.maroun-baydoun.com" rel="external author">Maroun Baydoun</a>
+    </div>
+    <div>
+      Learn more about <a href="https://en.wikipedia.org/wiki/Esperanto" rel="external" target="_blank" title="Esperanto on Wikipedia">Esperanto</a>
+      and check the great course on <a href="https://www.duolingo.com/course/eo/en/Learn-Esperanto-Online" rel="external" target="_blank" title="Esperanto course on Duolingo">Duolingo</a>
+    </div>
   </footer>
 </div>
 </template>
@@ -146,14 +152,20 @@ html, body {
       position: fixed;
       bottom: 0;
       left: 0;
+      display: flex;
+      justify-content: space-between;
       width: 100%;
       height: 30px;
-      padding: 10px 30px;
+      padding: 10px 0px;
       background-color: #fff;
       border-top: 1px solid #efefef;
       line-height: 30px;
       font-size: 13px;
       z-index: 100;
+
+      > div {
+        padding: 0 30px;
+      }
     }
 }
 
@@ -213,7 +225,12 @@ html, body {
     }
 
     footer {
-      padding: 10px 3%;
+      height: auto;
+      flex-direction: column;
+      line-height: 16px;
+      > div {
+        padding: 5px 3%;
+      }
     }
   }
 }
