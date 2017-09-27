@@ -6,7 +6,7 @@
     <li class="attribute" v-if="token.tense"><div class="attribute-label">Tense:</div> <div class="attribute-value">{{token.tense}}</div></li>
     <li class="attribute" v-if="token.case"><div class="attribute-label">Case:</div> <div class="attribute-value">{{token.case}}</div></li>
     <li class="attribute" v-if="token.number"><div class="attribute-label">Number:</div> <div class="attribute-value">{{token.number}}</div></li>
-    <li class="attribute" v-if="token.stem"><div class="attribute-label">Stem:</div> <div class="attribute-value">{{token.stem}}</div></li>
+    <li class="attribute" v-if="token.stem && token.stem != token.value"><div class="attribute-label">Stem:</div> <div class="attribute-value">{{token.stem}}</div></li>
   </ul>
 </li>
 </template>
@@ -28,7 +28,7 @@ export default {
     background-color: #efefef;
     width: 200px;
     height: 100px;
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
     border: 1px solid #ddd;
     box-shadow: 1px 1px 1px #efefef;
 
