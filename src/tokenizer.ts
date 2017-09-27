@@ -13,6 +13,8 @@ const recurrToknize = (word: string): Token => {
       return {...t, partOfSpeech: "pronoun", case: t.case || "nominative"};
     } else if (isConjunction(word)) {
       return {...t, partOfSpeech: "conjunction"};
+    } else if (isPreposition(word)) {
+      return {...t, partOfSpeech: "preposition"};
     } else if (isAccusative(word)) {
       return rt(stripSuffix(word), {...t, case: "accusative"});
     } else if (isPlural(word)) {
@@ -65,6 +67,8 @@ const isAdverb = (word: string) => endsWith(word, "e");
 const isPronoun = (word: string) => ["mi", "vi", "li", "ŝi", "ĝi", "ni", "ili", "oni", "si"].indexOf(word) > -1;
 
 const isConjunction = (word: string) => ["kaj", "aŭ", "nek", "se", "ĉu", "sed", "anstataŭ", "krom", "kiel", "ke"].indexOf(word) > -1;
+
+const isPreposition = (word: string) => ["al", "antaŭ", "apud", "ĉe", "ĉirkaŭ", "da", "de", "dum", "ekde", "ekster", "el", "en", "ĝis", "inter", "je", "kontraŭ", "krom", "kun", "malantaŭ", "malgraŭ", "per", "po", "por", "post", "preter", "pri", "pro", "sen", "sub", "super", "sur", "tra", "trans"].indexOf(word) > -1;
 
 const isPresentVerb = (word: string) => endsWith(word, "as");
 

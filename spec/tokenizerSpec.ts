@@ -1,4 +1,4 @@
-import {tokenize} from "../src/new-hope";
+import { tokenize } from "../src/new-hope";
 
 describe("tokenize", () => {
 
@@ -220,6 +220,14 @@ describe("tokenize", () => {
     expect(tokens.length).toEqual(1);
     expect(tokens[0].partOfSpeech).toEqual("conjunction");
     expect(tokens[0].stem).toEqual("kaj");
+  });
+
+  it("Classifies a preposition", () => {
+    const tokens = tokenize(["kun"]);
+
+    expect(tokens.length).toEqual(1);
+    expect(tokens[0].partOfSpeech).toEqual("preposition");
+    expect(tokens[0].stem).toEqual("kun");
   });
 
 });
