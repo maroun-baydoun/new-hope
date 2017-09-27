@@ -1,6 +1,6 @@
 {
   "name": "new-hope",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Esperanto tokenizer",
   "main": "./dist/new-hope.js",
   "types": "./dist/types/src/new-hope.d.ts",
