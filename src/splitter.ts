@@ -1,5 +1,5 @@
 export const split = (text: string) => {
-  return text.split(/[" " | ! | . | , | ?]/)
+  return text.split(/[" " | . | , | ; | : | ? | ! | ( | )]/)
     .map((w) => w.toLowerCase().trim())
     .filter((w) => w !== "")
 };
