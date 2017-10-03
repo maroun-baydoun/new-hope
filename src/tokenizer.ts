@@ -7,7 +7,9 @@ const recurrToknize = (word: string): Token => {
   const rt = (word: string, token?: Token): Token => {
     const t = token ? {...token, stem: word } : { value: word, stem: word };
 
-    if (isArticle(word)) {
+    if (isNumeral(word)) {
+      return {...t, partOfSpeech: "numeral"};
+    } else if (isArticle(word)) {
       return {...t, partOfSpeech: "article"};
     } else if (isPronoun(word)) {
       return {...t, partOfSpeech: "pronoun", case: t.case || "nominative"};
@@ -69,6 +71,8 @@ const isPronoun = (word: string) => ["mi", "vi", "li", "ŝi", "ĝi", "ni", "ili"
 const isConjunction = (word: string) => ["kaj", "aŭ", "nek", "se", "ĉu", "sed", "anstataŭ", "krom", "kiel", "ke"].indexOf(word) > -1;
 
 const isPreposition = (word: string) => ["al", "antaŭ", "apud", "ĉe", "ĉirkaŭ", "da", "de", "dum", "ekde", "ekster", "el", "en", "ĝis", "inter", "je", "kontraŭ", "krom", "kun", "malantaŭ", "malgraŭ", "per", "po", "por", "post", "preter", "pri", "pro", "sen", "sub", "super", "sur", "tra", "trans"].indexOf(word) > -1;
+
+const isNumeral = (word: string) => /^\d+$/.test(word);
 
 const isPresentVerb = (word: string) => endsWith(word, "as");
 

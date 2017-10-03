@@ -230,4 +230,12 @@ describe("tokenize", () => {
     expect(tokens[0].stem).toEqual("kun");
   });
 
+  it("Classifies a numeral", () => {
+    const tokens = tokenize(["25"]);
+
+    expect(tokens.length).toEqual(1);
+    expect(tokens[0].partOfSpeech).toEqual("numeral");
+    expect(tokens[0].stem).toEqual("25");
+  });
+
 });
