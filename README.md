@@ -1,9 +1,8 @@
 # new-hope
-[![npm version](https://badge.fury.io/js/new-hope.svg)](https://badge.fury.io/js/new-hope)
+[![npm version](https://badge.fury.io/js/new-hope.svg)](https://badge.fury.io/js/new-hope)  
 ### Esperanto tokenizer written in TypeScript
-
 ----
-
+Give it a try [here](http://dev.maroun-baydoun.com/new-hope/).
 ##### Esperanto? Is that Spanish?
 Esperanto is a constructed language created by L. L. Zamenhof in 1887. Find out more [here](https://en.wikipedia.org/wiki/Esperanto) and check out the great [Duolingo Esperanto Course](https://www.duolingo.com/course/eo/en/Learn-Esperanto-Online).
 
@@ -40,6 +39,3 @@ const tokens = tokenize(words);
 ]
 
 ```
-
----
-Give it a try [here](https://maroun-baydoun.github.io/new-hope/).
