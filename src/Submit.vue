@@ -22,13 +22,13 @@ export default {
 
 <style lang="scss" scoped>
 button {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     color: #fff;
     background: #090;
     height: 54px;
     padding: 6px 12px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
     border-radius: 3px;
     border: 0;

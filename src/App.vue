@@ -79,7 +79,7 @@ html, body {
   margin: 0;
 }
 #app {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
@@ -115,6 +115,7 @@ html, body {
       }
 
       h1, h4 {
+        font-family: "Roboto", Arial, sans-serif;
         font-weight: normal;
         display: inline-block;
         margin: 0;
@@ -238,6 +239,7 @@ html, body {
       flex-direction: column;
       line-height: 16px;
       box-shadow: 0 0 5px #efefef;
+      font-size: 12px;
       > div {
         padding: 5px 3%;
       }

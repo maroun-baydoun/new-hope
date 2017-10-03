@@ -21,6 +21,7 @@ export default {
 
 <style lang="scss" scoped>
 input {
+    font-family: "Open Sans", Arial, sans-serif;
     width: 500px;
     height: 50px;
     font-size: 18px;
