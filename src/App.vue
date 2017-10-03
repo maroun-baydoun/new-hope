@@ -27,7 +27,7 @@
   </main>
   <footer>
     <div>
-      Created by <a href="http://www.maroun-baydoun.com" rel="external author">Maroun Baydoun</a>
+      Created by <a href="http://www.maroun-baydoun.com" rel="author me">Maroun Baydoun</a>
     </div>
     <div>
       Learn more about <a href="https://en.wikipedia.org/wiki/Esperanto" rel="external" target="_blank" title="Esperanto on Wikipedia">Esperanto</a>

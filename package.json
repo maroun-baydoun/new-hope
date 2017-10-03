@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/maroun-baydoun/new-hope.git"
   },
-  "homepage": "https://maroun-baydoun.github.io/new-hope/",
+  "homepage": "http://dev.maroun-baydoun.com/new-hope/",
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
