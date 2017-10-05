@@ -30,7 +30,8 @@
       Created by <a href="http://www.maroun-baydoun.com" rel="author me">Maroun Baydoun</a>
     </div>
     <div>
-      Learn more about <a href="https://en.wikipedia.org/wiki/Esperanto" rel="external" target="_blank" title="Esperanto on Wikipedia">Esperanto</a>
+      See other <a href="http://dev.maroun-baydoun.com/" rel="author me" title="Open source projects by Maroun Baydoun">projects</a>,
+      learn more about <a href="https://en.wikipedia.org/wiki/Esperanto" rel="external" target="_blank" title="Esperanto on Wikipedia">Esperanto</a>
       and check the great course on <a href="https://www.duolingo.com/course/eo/en/Learn-Esperanto-Online" rel="external" target="_blank" title="Esperanto course on Duolingo">Duolingo</a>
     </div>
   </footer>

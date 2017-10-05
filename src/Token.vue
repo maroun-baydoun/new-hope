@@ -42,7 +42,8 @@ export default {
     margin: 10px 10px 0;
     background-color: #efefef;
     width: 200px;
-    height: 100px;
+    min-height: 100px;
+    height: auto;
     padding: 10px 20px 20px;
     border: 1px solid #ddd;
     box-shadow: 1px 1px 1px #efefef;
