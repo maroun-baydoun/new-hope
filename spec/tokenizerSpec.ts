@@ -238,4 +238,13 @@ describe("tokenize", () => {
     expect(tokens[0].stem).toEqual("25");
   });
 
+  it("Cannot classify a word that falls under none of the tokenization rules", () => {
+    const tokens = tokenize(["word"]);
+
+    expect(tokens.length).toEqual(1);
+    expect(tokens[0].partOfSpeech).toBeUndefined();
+    expect(tokens[0].value).toEqual("word");
+    expect(tokens[0].stem).toEqual("word");
+  });
+
 });

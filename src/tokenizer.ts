@@ -50,7 +50,7 @@ const recurrToknize = (word: string): Token => {
 
 }
 
-const endsWith = (word: string, suffix: string) => word.lastIndexOf(suffix) === word.length - suffix.length;
+const endsWith = (word: string, suffix: string) => word.length > suffix.length && word.lastIndexOf(suffix) === word.length - suffix.length;
 
 const isArticle = (word: string) => word === "la";
 
