@@ -1,8 +1,9 @@
 <template>
 <li :class="[containerClass]" class="token">
   <div class="token-value">{{token.value}}</div>
-  <ul class="attribute-list">
-    <li class="attribute" v-if="token.partOfSpeech">
+  <div class="unknown" v-if="!token.partOfSpeech">Unknown</div>
+  <ul class="attribute-list" v-if="token.partOfSpeech">
+    <li class="attribute">
       <div class="attribute-label">Part of speech:</div>
       <div class="attribute-value">{{token.partOfSpeech}}</div>
     </li>
@@ -54,6 +55,11 @@ export default {
         margin-bottom: 10px;
     }
 
+    .unknown {
+      font-size: 14px;
+      font-style: italic;
+    }
+
     .attribute-list {
         padding: 0;
         list-style: none;
@@ -80,6 +86,7 @@ export default {
 @media only screen and (min-device-width : 320px) and (max-device-width : 760px) {
     .token {
         width: auto;
+        padding: 10px 15px 15px;
     }
 }
 </style>

@@ -33,7 +33,7 @@
     "webpack-dev-server": "2.8.2"
   },
   "dependencies": {
-    "new-hope": "1.0.5",
+    "new-hope": "1.0.6",
     "vue": "2.4.4"
   }
 }
