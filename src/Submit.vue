@@ -11,11 +11,6 @@ export default {
     containerClass: {
       type: String
     }
-  },
-  data: function() {
-    return {}
-  },
-  methods: {
   }
 }
 </script>

@@ -8,9 +8,6 @@
 export default {
   name: 'text-box',
   props: ['value', 'containerClass', 'placeholder'],
-  data: function() {
-    return {}
-  },
   methods: {
     updateValue: function(value) {
       this.$emit('input', value)

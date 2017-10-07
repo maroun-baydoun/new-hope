@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<div class="app">
   <header>
     <h1><a href="https://github.com/maroun-baydoun/new-hope">new-hope</a></h1>
     <h4>Esperanto Tokenizer</h4>
@@ -13,13 +13,18 @@
     </div>
   </header>
   <main>
-    <form v-on:submit.prevent="onSubmit">
+    <div class="learn-more-container" v-if="!learnMore">
+      <a href="#learn-more" class="learn-more" title="Learn more"
+         v-on:click.prevent="toggleLearnMore">?</a>
+    </div>
+    <learn-more v-if="learnMore" :onClose="toggleLearnMore"></learn-more>
+    <form v-if="!learnMore" v-on:submit.prevent="onSubmit">
       <section class="input">
         <text-box v-model="input" placeholder="Enter an Esperanto sentence" container-class="container"></text-box>
         <submit container-class="container submit-container"></submit>
       </section>
     </form>
-    <section class="output">
+    <section v-if="!learnMore" class="output">
       <ul class="token-list">
         <token v-for="token in tokens" :key="token.value" :token="token"></token>
       </ul>
@@ -39,6 +44,7 @@
 </template>
 
 <script>
+import LearnMore from './LearnMore.vue';
 import Submit from './Submit.vue';
 import TextBox from './TextBox.vue';
 import Token from './Token.vue';
@@ -49,13 +55,15 @@ export default {
   data: function() {
     return {
       input: "",
-      tokens: []
+      tokens: [],
+      learnMore: false
     }
   },
   components: {
-    'text-box': TextBox,
-    'submit': Submit,
-    'token': Token
+    [TextBox.name]: TextBox,
+    [Submit.name]: Submit,
+    [Token.name]: Token,
+    [LearnMore.name]: LearnMore
   },
   methods: {
     onSubmit() {
@@ -69,6 +77,9 @@ export default {
       if (tokenList) {
         this.$scrollTo(tokenList, 500, {offset: -10 , cancelable: false});
       }
+    },
+    toggleLearnMore() {
+      this.learnMore = !this.learnMore;
     }
   }
 }
@@ -79,7 +90,7 @@ html, body {
   padding: 0;
   margin: 0;
 }
-#app {
+.app {
     font-family: "Open Sans", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -87,6 +98,7 @@ html, body {
 
     a {
       color: #090;
+      outline: none;
       text-decoration: none;
       transition: color 0.3s;
 
@@ -94,6 +106,10 @@ html, body {
         color: #01a901;
         text-decoration: underline;
       }
+    }
+
+    h1, h4, h5, h6 {
+        font-family: "Roboto", Arial, sans-serif;
     }
 
     header {
@@ -116,7 +132,6 @@ html, body {
       }
 
       h1, h4 {
-        font-family: "Roboto", Arial, sans-serif;
         font-weight: normal;
         display: inline-block;
         margin: 0;
@@ -128,13 +143,39 @@ html, body {
     }
 
     main {
-      max-width: 800px;
-      margin: 80px auto;
+      margin: 20px 0 80px 0;
+
+      .learn-more-container {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 30px;
+
+        .learn-more {
+          border: 1px solid;
+          border-radius: 50%;
+          text-align: center;
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: bold;
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          padding: 5px;
+
+          &:hover {
+            text-decoration: none;
+            background-color: #090;
+            color: #fff;
+          }
+        }
+      }
 
       .input {
         display: flex;
         justify-content: center;
         flex-direction: row;
+        max-width: 800px;
+        margin: 0 auto;
 
         .container {
           margin-top: 20px;
@@ -147,7 +188,8 @@ html, body {
       }
 
       .output {
-        margin-top: 50px;
+        max-width: 800px;
+        margin: 50px auto 0 auto;
 
         .token-list {
           display: flex;
@@ -181,7 +223,7 @@ html, body {
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 760px) {
-  #app {
+  .app {
     header {
       padding: 10px 3%;
 
@@ -216,6 +258,10 @@ html, body {
       width: 94%;
       padding: 0 3%;
       margin: 30px auto;
+
+      .learn-more-container {
+        padding: 0;
+      }
 
       .input {
         flex-direction: column;
