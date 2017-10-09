@@ -113,6 +113,10 @@ export default {
       padding: 0 0 80px 0;
 
       section {
+        &.padded {
+          padding-left: 0px;
+        }
+
         pre{
           width: auto;
           overflow-y: scroll;

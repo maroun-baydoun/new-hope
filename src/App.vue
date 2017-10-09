@@ -155,7 +155,7 @@ html, body {
           border-radius: 50%;
           text-align: center;
           font-size: 14px;
-          line-height: 14px;
+          line-height: 15px;
           font-weight: bold;
           display: inline-block;
           width: 15px;
