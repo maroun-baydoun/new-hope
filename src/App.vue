@@ -1,7 +1,7 @@
 <template>
 <div class="app">
   <header>
-    <h1><a href="https://github.com/maroun-baydoun/new-hope">new-hope</a></h1>
+    <h1><a href="http://www.maroun-baydoun.com/projects/new-hope/">new-hope</a></h1>
     <h4>Esperanto Tokenizer</h4>
     <div class="npm-badge">
       <a href="https://badge.fury.io/js/new-hope">
@@ -32,10 +32,10 @@
   </main>
   <footer>
     <div>
-      Created by <a href="http://www.maroun-baydoun.com" rel="author me">Maroun Baydoun</a>
+      Created by <a href="http://www.maroun-baydoun.com" rel="author me home">Maroun Baydoun</a>
     </div>
     <div>
-      See other <a href="http://dev.maroun-baydoun.com/" rel="author me" title="Open source projects by Maroun Baydoun">projects</a>,
+      See other <a href="http://www.maroun-baydoun.com/projects/" rel="author me" title="Open source projects by Maroun Baydoun">projects</a>,
       learn more about <a href="https://en.wikipedia.org/wiki/Esperanto" rel="external" target="_blank" title="Esperanto on Wikipedia">Esperanto</a>
       and check the great course on <a href="https://www.duolingo.com/course/eo/en/Learn-Esperanto-Online" rel="external" target="_blank" title="Esperanto course on Duolingo">Duolingo</a>
     </div>
