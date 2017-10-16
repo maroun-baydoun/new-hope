@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/maroun-baydoun/new-hope/issues"
   },
-  "homepage": "http://dev.maroun-baydoun.com/new-hope/",
+  "homepage": "http://www.maroun-baydoun.com/projects/new-hope/",
   "keywords": [
     "typescript",
     "esperanto",
@@ -31,8 +31,8 @@
     "@types/jasmine": "2.6.0",
     "jasmine": "2.8.0",
     "jasmine-ts": "0.2.1",
-    "ts-loader": "2.3.7",
+    "ts-loader": "3.0.2",
     "typescript": "2.5.3",
-    "webpack": "3.6.0"
+    "webpack": "3.7.1"
   }
 }
