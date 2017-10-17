@@ -32,10 +32,10 @@ button {
     box-shadow: 1px 1px 1px #efefef;
     transition: background 0.3s, box-shadow 0.3s;
 
-    &:hover {
+    &:hover, &:focus {
       background: #01a901;
       box-shadow: 1px 1px 1px #ddd;
-    }
+    } 
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 760px) {

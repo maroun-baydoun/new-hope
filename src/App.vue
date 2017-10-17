@@ -128,11 +128,11 @@ html, body {
       }
 
       .npm-badge {
-        right: 30px;
+        right: 90px;
       }
 
       .github-badge {
-        right: 155px;
+        right: 30px;
       }
 
       h1, h4 {
