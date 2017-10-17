@@ -1,0 +1,37 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <rect height="250" width="250" y="0" x="0" fill="none"/>
+    <g>
+      <path
+        stroke="#333"
+        stroke-linejoin="round"
+        stroke-width="4px"
+        fill="#090"
+        d="m124.999998,14.181122l27.257049,85.007378l89.280822,-0.349284l-72.435026,52.188158l27.921519,84.791516l-72.024363,-52.753327l-72.024375,52.753315l27.921531,-84.791504l-72.435026,-52.18817l89.280809,0.349296l27.257061,-85.007378l0,0z"/>
+      <g>
+        <text
+          stroke="#333"
+          stroke-linejoin="round"
+          stroke-width="3px"
+          transform="matrix(0.8779694984426313,0,0,0.8779694984426313,25.002896955923575,15.708888086707226) "
+          font-weight="bold"
+          font-family="Helvetica, Arial, sans-serif"
+          font-size="63"
+          y="161.821224"
+          x="102.821492"
+          fill="#ffffff">H</text>
+        <text
+          stroke="#333"
+          stroke-linejoin="round"
+          stroke-width="3px"
+          transform="matrix(0.8779694984426313,0,0,0.8779694984426313,25.002896955923575,15.708888086707226) "
+          font-weight="bold"
+          font-family="Helvetica, Arial, sans-serif"
+          font-size="63"
+          y="161.913734"
+          x="75.038197"
+          fill="#ffffff">N</text>
+      </g>
+    </g>
+  </g>
+</svg>
