@@ -36,8 +36,8 @@
     </div>
     <div>
       See other <a href="http://www.maroun-baydoun.com/projects/" rel="author me" title="Open source projects by Maroun Baydoun">projects</a>,
-      learn more about <a href="https://en.wikipedia.org/wiki/Esperanto" rel="external" target="_blank" title="Esperanto on Wikipedia">Esperanto</a>
-      and check the great course on <a href="https://www.duolingo.com/course/eo/en/Learn-Esperanto-Online" rel="external" target="_blank" title="Esperanto course on Duolingo">Duolingo</a>
+      learn more about <a href="https://en.wikipedia.org/wiki/Esperanto" rel="external noopener noreferrer" target="_blank" title="Esperanto on Wikipedia">Esperanto</a>
+      and check the great course on <a href="https://www.duolingo.com/course/eo/en/Learn-Esperanto-Online" rel="external noopener noreferrer" target="_blank" title="Esperanto course on Duolingo">Duolingo</a>
     </div>
   </footer>
 </div>
