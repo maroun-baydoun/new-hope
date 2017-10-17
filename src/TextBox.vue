@@ -1,6 +1,14 @@
 <template>
 <div :class="[containerClass]">
-  <input type="text" :placeholder="placeholder" :value="value" @input="updateValue($event.target.value)" />
+  <input type="text"
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"
+         :placeholder="placeholder"
+         :aria-label="placeholder"
+         :value="value"
+         @input="updateValue($event.target.value)" />
 </div>
 </template>
 

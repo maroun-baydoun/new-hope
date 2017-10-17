@@ -106,6 +106,10 @@ html, body {
         color: #01a901;
         text-decoration: underline;
       }
+
+      &:focus {
+        outline: 1px dashed #aaa;
+      }
     }
 
     h1, h4, h5, h6 {
