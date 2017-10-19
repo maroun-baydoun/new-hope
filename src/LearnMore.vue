@@ -36,6 +36,8 @@ require(["new-hope"], (newHope) => {
 });
       </pre>
     </section>
+    <h5>Privacy</h5>
+    <section>None of the text you input on this website is sent to or stored in any server. All the processing happens in your browser.</section>
   </article>
 </template>
 

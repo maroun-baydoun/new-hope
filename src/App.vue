@@ -14,7 +14,7 @@
   </header>
   <main>
     <div class="learn-more-container" v-if="!learnMore">
-      <a href="#learn-more" class="learn-more" title="Learn more"
+      <a href="#learn-more" class="learn-more" title="Learn more" aria-title="Learn more"
          v-on:click.prevent="toggleLearnMore">?</a>
     </div>
     <learn-more v-if="learnMore" :onClose="toggleLearnMore"></learn-more>
