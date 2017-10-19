@@ -1,6 +1,7 @@
 <template>
 <div class="app">
   <header>
+    <img src="img/logo.svg" alt="new-hope logo" class="logo"/>
     <h1><a href="http://www.maroun-baydoun.com/projects/new-hope/">new-hope</a></h1>
     <h4>Esperanto Tokenizer</h4>
     <div class="npm-badge">
@@ -120,7 +121,16 @@ html, body {
       position: relative;
       padding: 10px 30px;
       height: 50px;
+      line-height: 50px;
+      background-color: #090;
       border-bottom: 1px solid #efefef;
+
+      .logo {
+        width: 50px;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+      }
 
       .npm-badge, .github-badge {
         position: absolute;
@@ -141,8 +151,21 @@ html, body {
         margin: 0;
       }
 
+      h1 {
+        margin-left: 60px;
+        a {
+          color: #fff;
+
+          &:hover {
+            color: darken(#fff, 10);
+            text-decoration: none;
+          }
+        }
+      }
+
       h4 {
         margin-left: 10px;
+        color: #000;
       }
     }
 
@@ -230,9 +253,16 @@ html, body {
   .app {
     header {
       padding: 10px 3%;
+      line-height: normal;
+
+      .logo {
+        width: 40px;
+        left: 3%;
+      }
 
       h1, h4 {
         display: block;
+        margin-left: 45px;
       }
 
       h1 {
@@ -240,7 +270,6 @@ html, body {
       }
 
       h4 {
-        margin: 0;
         font-size: 13px;
       }
 
