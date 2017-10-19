@@ -1,5 +1,9 @@
 {
   "name": "New Hope",
+  "short_name": "New Hope",
+  "description": "Esperanto tokenizer",
+  "dir": "ltr",
+  "lang": "en",
   "icons": [{
       "src": "img/favicons/android-chrome-192x192.png",
       "sizes": "192x192",
@@ -13,5 +17,6 @@
   ],
   "theme_color": "#090",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "orientation": "portrait-primary"
 }
