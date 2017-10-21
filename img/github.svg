@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="200px" height="67px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;">
+    <g transform="matrix(0.191426,0,0,0.047838,66.032,-0.189278)">
+        <rect x="0" y="0" width="700" height="1400" style="fill:white;"/>
+    </g>
+    <g>
+        <g transform="matrix(0.0943894,0,0,0.0477603,0.0554144,-0.0673336)">
+            <rect x="0" y="0" width="700" height="1400" style="fill:rgb(0,153,0);"/>
+        </g>
+        <g transform="matrix(0.228901,0,0,0.228901,4.34783,4.78775)">
+            <path d="M125,14.181L152.257,99.189L241.538,98.839L169.103,151.027L197.024,235.819L125,183.066L52.976,235.819L80.897,151.027L8.462,98.839L97.743,99.188L125,14.181L125,14.181Z" style="fill:white;fill-rule:nonzero;stroke:rgb(51,51,51);stroke-width:8px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-713.472,-287.741)">
+        <text x="790.238px" y="327.188px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:24px;fill:rgb(0,153,0);">new-hope</text>
+    </g>
+</svg>
