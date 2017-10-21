@@ -10,22 +10,62 @@ describe("tokenize", () => {
     expect(tokens[0].stem).toEqual("la");
   });
 
-  it("Classifies a nominative pronoun", () => {
+  it("Classifies a nominative perosnal pronoun", () => {
     const tokens = tokenize(["mi"]);
 
     expect(tokens.length).toEqual(1);
-    expect(tokens[0].partOfSpeech).toEqual("pronoun");
+    expect(tokens[0].partOfSpeech).toEqual("personalPronoun");
     expect(tokens[0].case).toEqual("nominative");
     expect(tokens[0].stem).toEqual("mi");
   });
 
-  it("Classifies an accusative pronoun", () => {
+  it("Classifies an accusative personal pronoun", () => {
     const tokens = tokenize(["min"]);
 
     expect(tokens.length).toEqual(1);
-    expect(tokens[0].partOfSpeech).toEqual("pronoun");
+    expect(tokens[0].partOfSpeech).toEqual("personalPronoun");
     expect(tokens[0].case).toEqual("accusative");
     expect(tokens[0].stem).toEqual("mi");
+  });
+
+  it("Classifies a nominative possessive pronoun", () => {
+    const tokens = tokenize(["mia"]);
+
+    expect(tokens.length).toEqual(1);
+    expect(tokens[0].partOfSpeech).toEqual("possessivePronoun");
+    expect(tokens[0].case).toEqual("nominative");
+    expect(tokens[0].number).toEqual("singular");
+    expect(tokens[0].stem).toEqual("mia");
+  });
+
+  it("Classifies an accusative possessive pronoun", () => {
+    const tokens = tokenize(["mian"]);
+
+    expect(tokens.length).toEqual(1);
+    expect(tokens[0].partOfSpeech).toEqual("possessivePronoun");
+    expect(tokens[0].case).toEqual("accusative");
+    expect(tokens[0].number).toEqual("singular");
+    expect(tokens[0].stem).toEqual("mia");
+  });
+
+  it("Classifies a plural nominative possessive pronoun", () => {
+    const tokens = tokenize(["miaj"]);
+
+    expect(tokens.length).toEqual(1);
+    expect(tokens[0].partOfSpeech).toEqual("possessivePronoun");
+    expect(tokens[0].case).toEqual("nominative");
+    expect(tokens[0].number).toEqual("plural");
+    expect(tokens[0].stem).toEqual("mia");
+  });
+
+  it("Classifies a plural accusative possessive pronoun", () => {
+    const tokens = tokenize(["miajn"]);
+
+    expect(tokens.length).toEqual(1);
+    expect(tokens[0].partOfSpeech).toEqual("possessivePronoun");
+    expect(tokens[0].case).toEqual("accusative");
+    expect(tokens[0].number).toEqual("plural");
+    expect(tokens[0].stem).toEqual("mia");
   });
 
   it("Classifies a singular nominative noun", () => {

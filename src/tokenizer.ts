@@ -11,8 +11,10 @@ const recurrToknize = (word: string): Token => {
       return {...t, partOfSpeech: "numeral"};
     } else if (isArticle(word)) {
       return {...t, partOfSpeech: "article"};
-    } else if (isPronoun(word)) {
-      return {...t, partOfSpeech: "pronoun", case: t.case || "nominative"};
+    } else if (isPersonalPronoun(word)) {
+      return {...t, partOfSpeech: "personalPronoun", case: t.case || "nominative"};
+    } else if (isPossessivePronoun(word)) {
+      return {...t, partOfSpeech: "possessivePronoun", case: t.case || "nominative", number: t.number || "singular"};
     } else if (isConjunction(word)) {
       return {...t, partOfSpeech: "conjunction"};
     } else if (isPreposition(word)) {
@@ -66,7 +68,9 @@ const isAdjective = (word: string) => endsWith(word, "a");
 
 const isAdverb = (word: string) => endsWith(word, "e");
 
-const isPronoun = (word: string) => ["mi", "vi", "li", "ŝi", "ĝi", "ni", "ili", "oni", "si"].indexOf(word) > -1;
+const isPersonalPronoun = (word: string) => ["mi", "vi", "li", "ŝi", "ĝi", "ni", "ili", "oni", "si"].indexOf(word) > -1;
+
+const isPossessivePronoun = (word: string) => ["mia", "via", "lia", "ŝia", "ĝia", "nia", "ilia", "sia"].indexOf(word) > -1;
 
 const isConjunction = (word: string) => ["kaj", "aŭ", "nek", "se", "ĉu", "sed", "anstataŭ", "krom", "kiel", "ke"].indexOf(word) > -1;
 
