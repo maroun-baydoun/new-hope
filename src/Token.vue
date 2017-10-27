@@ -4,8 +4,7 @@
   <div class="unknown" v-if="!token.partOfSpeech">Unknown</div>
   <ul class="attribute-list" v-if="token.partOfSpeech">
     <li class="attribute">
-      <div class="attribute-label">Part of speech:</div>
-      <div class="attribute-value">{{token.partOfSpeech}}</div>
+      <div class="attribute-value">{{token.partOfSpeech | capitalize}}</div>
     </li>
     <li class="attribute" v-if="token.tense">
       <div class="attribute-label">Tense:</div>
@@ -31,8 +30,12 @@
 export default {
   name: 'token',
   props: ['token', 'containerClass'],
-  data: function() {
-    return {}
+  filters: {
+    capitalize: function (value) {
+      if (!value) return ''
+      return value.replace(/([A-Z])/g, ' $1')
+                  .replace(/^./, (str) => str.toUpperCase())
+    }
   }
 }
 </script>
