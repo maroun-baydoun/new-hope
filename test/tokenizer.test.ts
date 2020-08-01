@@ -1,7 +1,6 @@
 import { tokenize } from "../src/new-hope";
 
 describe("tokenize", () => {
-
   it("Classifies an article", () => {
     const tokens = tokenize(["la"]);
 
@@ -286,5 +285,4 @@ describe("tokenize", () => {
     expect(tokens[0].value).toEqual("word");
     expect(tokens[0].stem).toEqual("word");
   });
-
 });

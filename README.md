@@ -5,8 +5,7 @@
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/maroun-baydoun/new-hope)
 
 ----
-Give it a try [here](http://www.maroun-baydoun.com/projects/new-hope/).
-##### Esperanto? Is that Spanish?
+##### Esperanto?
 Esperanto is a constructed language created by L. L. Zamenhof in 1887. Find out more [here](https://en.wikipedia.org/wiki/Esperanto) and check out the great [Duolingo Esperanto Course](https://www.duolingo.com/course/eo/en/Learn-Esperanto-Online).
 
 ----

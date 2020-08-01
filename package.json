@@ -3,11 +3,22 @@
   "version": "1.0.7",
   "description": "Esperanto tokenizer",
   "main": "./dist/new-hope.js",
-  "types": "./dist/types/src/new-hope.d.ts",
+  "types": "./types/src/new-hope.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "README.md",
+    "LICENSE.md"
+  ],
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack -w",
-    "test": "jasmine-ts ./spec/*.ts"
+    "build": "webpack --config webpack.config.js",
+    "test": "jest test",
+    "test:watch": "jest test --watch",
+    "prettier:check": "prettier --check './{src,test}/**/*.ts'",
+    "prettier:write": "prettier --write './{src,test}/**/*.ts'",
+    "preversion": "npm test",
+    "version": "rm -rf dist && rm -rf types && npm run build",
+    "postversion": "git push --tags"
   },
   "author": {
     "name": "Maroun Baydoun",
@@ -21,18 +32,19 @@
   "bugs": {
     "url": "https://github.com/maroun-baydoun/new-hope/issues"
   },
-  "homepage": "http://www.maroun-baydoun.com/projects/new-hope/",
   "keywords": [
     "typescript",
     "esperanto",
     "tokenizer"
   ],
   "devDependencies": {
-    "@types/jasmine": "2.6.0",
-    "jasmine": "2.8.0",
-    "jasmine-ts": "0.2.1",
-    "ts-loader": "3.0.2",
-    "typescript": "2.5.3",
-    "webpack": "3.8.1"
+    "@types/jest": "26.0.8",
+    "jest": "26.2.2",
+    "prettier": "2.0.5",
+    "ts-jest": "26.1.4",
+    "ts-loader": "8.0.2",
+    "typescript": "3.9.7",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12"
   }
 }

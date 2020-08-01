@@ -1,5 +1,4 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path');
 
 const PATHS = {
   src: path.join(__dirname, './src'),
@@ -7,7 +6,7 @@ const PATHS = {
 }
 
 module.exports = {
-
+  mode: 'production',
   entry: {
     'new-hope': PATHS.src + '/new-hope.ts'
   },
@@ -16,7 +15,8 @@ module.exports = {
     filename: '[name].js',
     library: 'new-hope',
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
+    globalObject: 'this'
   },
   devtool: 'source-map',
   module: {

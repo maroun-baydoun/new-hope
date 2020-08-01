@@ -5,14 +5,10 @@
         "declaration": true,
         "declarationDir": "./types",
         "strict": true,
-        "sourceMap": false,
-        "types" : [
-            "jasmine"
-        ]
+        "sourceMap": true
     },
     "exclude": [
         "node_modules",
-        "dist",
-        "src/spec"
+        "dist"
     ]
 }
