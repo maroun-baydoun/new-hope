@@ -1,9 +1,0 @@
-*.ts
-!*.d.ts
-spec/**/*
-node_modules/**/*
-src/**/*
-dist/types/spec/**/*
-tsconfig.json
-tsconfig-test.json
-webpack.config.js
