@@ -40,10 +40,16 @@
     "webpack-merge": "5.5.0"
   },
   "dependencies": {
+    "new-hope": "1.0.8",
     "prismjs": "1.23.0"
   },
   "features": {
     "react": false,
-    "prismjs": false
+    "prismjs": {
+      "languages": [
+        "shell",
+        "javascript"
+      ]
+    }
   }
 }
