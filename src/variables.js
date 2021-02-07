@@ -5,6 +5,6 @@ module.exports = {
   heading2: "Esperanto tokenizer",
   githubLink: "https://github.com/maroun-baydoun/new-hope",
   npmLink: "https://www.npmjs.com/package/new-hope",
-  subPath: "new-hope",
+  subPath: "new-hope/",
   linkHome: true,
 };
