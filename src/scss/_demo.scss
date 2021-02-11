@@ -1,0 +1,48 @@
+@import "variables";
+@import "mixins";
+
+.demo-container {
+  input {
+    width: 30vw;
+    font-size: 1.1rem;
+
+    @include padding(1);
+
+    @media #{$media-mobile} {
+      width: 100%;
+    }
+  }
+
+  .result-container {
+    width: 50vw;
+
+    @include margin-top(2);
+
+    @media #{$media-mobile} {
+      width: auto;
+    }
+
+    & > div {
+      @include margin-bottom(2);
+
+      & > div:first-of-type {
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      & > div:nth-of-type(2) {
+        font-size: 0.9rem;
+
+        @include margin-top(1);
+
+        & > span {
+          color: lighten($body-color2, 7);
+
+          &:not(:first-of-type) {
+            @include margin-left(1);
+          }
+        }
+      }
+    }
+  }
+}
