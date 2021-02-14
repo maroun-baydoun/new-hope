@@ -8,7 +8,8 @@
     "start:dev": "webpack serve --config ./webpack.dev.js",
     "format": "prettier --write 'src' 'webpack.*.js'",
     "build": "webpack --config ./webpack.prod.js",
-    "publish": "npm run build && node ./publish",
+    "generate-image": "node ./generate-image.js",
+    "publish": "npm run build && npm run generate-image && node ./publish",
     "pull-template": "git pull https://github.com/maroun-baydoun/gh-page-template.git  master --allow-unrelated-histories"
   },
   "author": {
@@ -30,6 +31,7 @@
     "html-loader": "1.3.2",
     "html-webpack-plugin": "4.5.0",
     "mini-css-extract-plugin": "1.3.5",
+    "node-html-to-image": "3.1.0",
     "node-sass": "5.0.0",
     "prettier": "2.2.1",
     "sass-loader": "10.1.0",
