@@ -1,0 +1,20 @@
+{
+  "name": "new-hope - Esperanto tokenizer",
+  "short_name": "new-hope - Esperanto tokenizer",
+  "description": "new-hope is an Esperanto tokenizer written in TypeScript and available on npm",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
